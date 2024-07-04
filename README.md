@@ -13,6 +13,7 @@ This project aims to build a machine learning model to detect if an image has be
 ## Steps to Run the Project
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/yourusername/vertical-image-flip-detection.git
    cd vertical-image-flip-detection
@@ -20,6 +21,7 @@ This project aims to build a machine learning model to detect if an image has be
 
 2. **Install Dependencies**
    Ensure you have Python installed. Then, install the required libraries.
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -36,6 +38,7 @@ This project aims to build a machine learning model to detect if an image has be
 
 - **Dataset Loading**
   The MNIST dataset is loaded using the `datasets` library.
+
   ```python
   from datasets import load_dataset
   mnist = load_dataset('mnist')
@@ -48,6 +51,8 @@ This project aims to build a machine learning model to detect if an image has be
       return np.flipud(image)
   ```
 
+<img src="./images/flipping_data.png"/>
+
 - **Data Splitting**
   The dataset is split into training (80%) and testing (20%) sets.
   ```python
@@ -58,6 +63,7 @@ This project aims to build a machine learning model to detect if an image has be
 
 - **CNN Classifier**
   A Convolutional Neural Network (CNN) is defined using TensorFlow and Keras.
+
   ```python
   from tensorflow.keras.models import Sequential
   from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
@@ -109,13 +115,17 @@ This project aims to build a machine learning model to detect if an image has be
 ## Results
 
 - **Accuracy**
-  At least one model achieves over 80% accuracy.
+  At least one model achieves over 98% accuracy.
 - **Misclassification Analysis**
-  Analysis of misclassified images is provided to understand model performance.
+Analysis of top 3 misclassified classes is provided to understand the factor of misclassification.
+<div>
+  <img src="./images/results1.png"/>
+  <img src="./images/results2.png"/>
+  <img src="./images/results3.png"/>
+</div>
 
 ## References
 
 - [MNIST Dataset](https://www.tensorflow.org/datasets/catalog/mnist)
 - [TensorFlow Documentation](https://www.tensorflow.org/overview)
 - [Keras Documentation](https://keras.io/docs/)
-
