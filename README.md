@@ -15,7 +15,7 @@ This project aims to build a machine learning model to detect if an image has be
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/vertical-image-flip-detection.git
+   git clone https://github.com/Thinhrichkidz/vertical-image-flip-detection.git
    cd vertical-image-flip-detection
    ```
 
